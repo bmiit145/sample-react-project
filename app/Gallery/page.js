@@ -12,7 +12,7 @@ const gallery = () => {
             const response = await axios.get("https://picsum.photos/v2/list")
             const data = response.data
             console.log(data);
-            // SetImages(data)
+            SetImages(data)
         } catch (error) {
             console.error("Error while fetch");
         }
@@ -28,12 +28,7 @@ const gallery = () => {
     return (
         <div className='p-10'>
 
-            {/* <button onClick={getImages} className=' px-5 py-3 bg-green-600 text-white  font-bold'>
-                Get Images
-            </button> */}
-            <button onClick={() => {
-                SetImages(data)
-            }} className=' px-5 py-3 bg-green-600 text-white  font-bold'>
+            <button onClick={getImages} className=' px-5 py-3 bg-green-600 text-white  font-bold'>
                 Get Images
             </button>
             <div className='p-10'>
